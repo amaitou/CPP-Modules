@@ -13,40 +13,55 @@ class Contact
 		std::string number;
 		std::string secret;
 		
-		void	set_fname(Contact contact)
+		int	set_fname(Contact contact)
 		{
 			std::string	fname;
 			std::cout << "[+] First Name: ";
 			std::cin >> fname;
+			if (!fname.length())
+				return 1 ;
 			this->fname = fname;
+			return 0;
 		}
-		void	set_lname(Contact contact)
+		int	set_lname(Contact contact)
 		{
 			std::string	lname;
 			std::cout << "[+] Last Name: ";
 			std::cin >> lname;
+			if (!lname.length())
+				return 2 ;
 			this->lname = lname;
+			return 0;
 		}
-		void	set_nname(Contact contact)
+		int	set_nname(Contact contact)
 		{
 			std::string	nname;
 			std::cout << "[+] Nickname: ";
 			std::cin >> nname;
+			if (!nname.length())
+				return 3 ;
 			this->nname = nname;
+			return 0;
 		}
-		void	set_number(Contact contact)
+		int	set_number(Contact contact)
 		{
 			std::string	number;
 			std::cout << "[+] Number: ";
 			std::cin >> number;
+			if (!number.length())
+				return 4 ;
 			this->number = number;
+			return 0;
 		}
-		void	set_secret(Contact contact)
+		int	set_secret(Contact contact)
 		{
 			std::string	secret;
 			std::cout << "[+] Secret: ";
 			std::cin >> secret;
+			if (!secret.length())
+				return 5 ;
 			this->secret = secret;
+			return 0;
 		}
 
 		void	string_width(std::string property)
@@ -105,11 +120,31 @@ class PhoneBook
 		void	add()
 		{
 			iterator = (iterator + 1) % 8;
-			contacts[iterator].set_fname(contacts[iterator]);
-			contacts[iterator].set_lname(contacts[iterator]);
-			contacts[iterator].set_nname(contacts[iterator]);
-			contacts[iterator].set_number(contacts[iterator]);
-			contacts[iterator].set_secret(contacts[iterator]);
+			if (contacts[iterator].set_fname(contacts[iterator]))
+			{
+				iterator--;	
+				return ;
+			}
+			if (contacts[iterator].set_lname(contacts[iterator]))
+			{
+				iterator--;	
+				return ;
+			}
+			if (contacts[iterator].set_nname(contacts[iterator]))
+			{
+				iterator--;	
+				return ;
+			}
+			if (contacts[iterator].set_number(contacts[iterator]))
+			{
+				iterator--;	
+				return ;
+			}
+			if (contacts[iterator].set_secret(contacts[iterator]))
+			{
+				iterator--;	
+				return ;
+			}
 			if (length < 8)
 				length++;
 		}
@@ -130,8 +165,6 @@ class PhoneBook
 				return ;
 			}
 			contacts->display_by_index(contacts[index]);
-			std::cin.clear();
-			clearerr(stdin);
 		}
 };
 
