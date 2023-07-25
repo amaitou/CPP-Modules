@@ -159,7 +159,7 @@ class PhoneBook
 			contacts[iterator].display_by_search(contacts, length);
 			std::cout << "Enter Index : ";
 			std::cin >> index;
-			if (index >= length)
+			if (!std::cin || index >= length)
 			{
 				std::cout  << "[!] Index Out Of Range" << std::endl;
 				return ;
@@ -185,6 +185,7 @@ int main(void)
 			book.search();
 		else
 			std::cout << "[!] Invalid Command, Try Again !" << std::endl;
+		fflush(stdin);
 		std::cin.clear();
 		clearerr(stdin);
 	}
