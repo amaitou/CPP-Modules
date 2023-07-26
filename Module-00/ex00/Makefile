@@ -2,15 +2,17 @@
 GPP = g++
 CFLAGS = -Wall -Wextra -Werror
 VFLAG = -std=c++98
-NAME = megaphone
-CPPF = megaphone.cpp
+NAME = Megaphone
+CPPF = 	Megaphone.cpp
+
+SRCS = $(CPPF:.cpp=.o)
 
 all: $(NAME)
 
-$(NAME): $(CPPF)
+$(NAME): $(SRCS)
 	$(GPP) $(VGLAG) $(CFLAGS) $? -o $@
 
 clean:
-	rm -rf $(NAME)
+	rm -rf $(NAME) $(SRCS)
 
 re: clean all

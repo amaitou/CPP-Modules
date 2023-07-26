@@ -7,12 +7,14 @@ CPPF = 	Contact.cpp \
 		PhoneBook.cpp \
 		main.cpp
 
+SRCS = $(CPPF:.cpp=.o)
+
 all: $(NAME)
 
-$(NAME): $(CPPF)
+$(NAME): $(SRCS)
 	$(GPP) $(VGLAG) $(CFLAGS) $? -o $@
 
 clean:
-	rm -rf $(NAME)
+	rm -rf $(NAME) $(SRCS)
 
 re: clean all
