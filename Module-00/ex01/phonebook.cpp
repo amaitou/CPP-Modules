@@ -9,11 +9,11 @@ PhoneBook::PhoneBook()
 
 void	PhoneBook::banner()
 {
-	std::cout << "[*] Welcome to our Phone Book Program!" << std::endl;
-	std::cout << "[?] Usuage :" << std::endl;
-	std::cout << "\tADD 	: add your contact to the list contacts." << std::endl;
-	std::cout << "\tSEARCH	: search for a specific contact using its index." << std::endl;
-	std::cout << "\tEXIT	: exit from the program." << std::endl;
+	std::cout << "[*] Welcome to our Phone Book Program!" << "\n";
+	std::cout << "[?] Usuage :" << "\n";
+	std::cout << "\tADD 	: add your contact to the list contacts." << "\n";
+	std::cout << "\tSEARCH	: search for a specific contact using its index." << "\n";
+	std::cout << "\tEXIT	: exit from the program." << "\n";
 }
 void	PhoneBook::add()
 {
@@ -51,7 +51,7 @@ void	PhoneBook::search()
 	int	index;
 	if (!length)
 	{
-		std::cout << "[!] No Contact Has Been Registered" << std::endl;
+		std::cout << "[!] No Contact Has Been Registered" << "\n";
 		return ;
 	}
 	contacts[iterator].display_by_search(contacts, length);
@@ -59,7 +59,7 @@ void	PhoneBook::search()
 	std::cin >> index;
 	if (!std::cin || index >= length)
 	{
-		std::cout  << "[!] Index Out Of Range" << std::endl;
+		std::cout  << "[!] Index Out Of Range" << "\n";
 		return ;
 	}
 	contacts->display_by_index(contacts[index]);
