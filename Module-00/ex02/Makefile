@@ -10,7 +10,7 @@ SRCS = $(CPPF:.cpp=.o)
 all: $(NAME)
 
 $(NAME): $(SRCS)
-	$(GPP) $(VGLAG) $(CFLAGS) $? -o $@
+	$(GPP) $(VGLAG) $(CFLAGS) $^ -o $@
 
 fclean:
 	rm -rf $(NAME) $(SRCS)
