@@ -2,10 +2,8 @@
 GPP = c++
 CFLAGS = -Wall -Wextra -Werror
 VFLAG = -std=c++98
-NAME = PhoneBook
-CPPF = 	Contact.cpp \
-		PhoneBook.cpp \
-		main.cpp
+NAME = Account
+CPPF = 	Account.cpp tests.cpp
 
 SRCS = $(CPPF:.cpp=.o)
 

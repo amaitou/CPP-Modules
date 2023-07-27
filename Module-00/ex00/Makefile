@@ -12,7 +12,7 @@ all: $(NAME)
 $(NAME): $(SRCS)
 	$(GPP) $(VGLAG) $(CFLAGS) $? -o $@
 
-clean:
+fclean:
 	rm -rf $(NAME) $(SRCS)
 
-re: clean all
+re: fclean all
