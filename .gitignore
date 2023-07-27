@@ -3,3 +3,6 @@
 *.o
 Megaphone
 Phonebook
+Account
+.DS_Store
+logfile.log
