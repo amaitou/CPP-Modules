@@ -17,7 +17,7 @@ int main(void)
 		else if (command == "SEARCH")
 			book.search();
 		else
-			std::cout << "\n[!] Invalid Command, Try Again !" << std::endl;
+			std::cout << "\n[!] Invalid Command, Try Again !" << "\n";
 		fflush(stdin);
 		std::cin.clear();
 		clearerr(stdin);

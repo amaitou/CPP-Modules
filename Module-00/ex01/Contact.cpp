@@ -69,16 +69,16 @@ void	Contact::display_by_search(Contact *contact, int number)
 		string_width(contact[i].fname);
 		string_width(contact[i].lname);
 		string_width(contact[i].nname);
-		std::cout << std::endl;
+		std::cout << "\n";
 		++i;
 	}
 }
 void	Contact::display_by_index(Contact contact)
 {
-	std::cout << "[-] First Name		: " << contact.fname << std::endl;
-	std::cout << "[-] Last Name		: " << contact.lname << std::endl;
-	std::cout << "[-] Nickname		: " << contact.nname << std::endl;
-	std::cout << "[-] Phone Number	: " << contact.number << std::endl;
-	std::cout << "[-] Darkest Secret	: " << contact.secret << std::endl;
-	std::cout << std::endl;
+	std::cout << "[-] First Name		: " << contact.fname << "\n";
+	std::cout << "[-] Last Name		: " << contact.lname << "\n";
+	std::cout << "[-] Nickname		: " << contact.nname << "\n";
+	std::cout << "[-] Phone Number	: " << contact.number << "\n";
+	std::cout << "[-] Darkest Secret	: " << contact.secret << "\n";
+	std::cout << "\n";
 }
