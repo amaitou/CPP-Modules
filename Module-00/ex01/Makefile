@@ -1,5 +1,5 @@
 
-GPP = g++
+GPP = c++
 CFLAGS = -Wall -Wextra -Werror
 VFLAG = -std=c++98
 NAME = PhoneBook

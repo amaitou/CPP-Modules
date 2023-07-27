@@ -1,2 +1,5 @@
 *.pdf
 *.out
+*.o
+Megaphone
+Phonebook
