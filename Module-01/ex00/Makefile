@@ -3,7 +3,10 @@ GPP = c++
 CFLAGS = -Wall -Wextra -Werror
 VFLAG = -std=c++98
 NAME = Zombie
-CPPF = 	Zombie.cpp main.cpp
+CPPF = 	Zombie.cpp \
+		main.cpp \
+		newZombie.cpp \
+		randomChump.cpp
 
 SRCS = $(CPPF:.cpp=.o)
 
