@@ -3,8 +3,8 @@
 #include <string>
 #include <iomanip>
 
-#ifndef CONTACT_H_HPP
-#define CONTACT_H_HPP
+#ifndef CONTACT_HPP
+#define CONTACT_HPP
 
 class Contact
 {
