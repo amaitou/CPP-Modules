@@ -1,7 +1,7 @@
 GPP = c++
 CFLAGS = -Wall -Wextra -Werror
 VFLAG = -std=c++98
-NAME = reference
+NAME = Reference
 CPPF = 	main.cpp
 
 SRCS = $(CPPF:.cpp=.o)
