@@ -2,7 +2,7 @@
 GPP = c++
 CFLAGS = -Wall -Wextra -Werror
 VFLAG = -std=c++98
-NAME = Account
+NAME = BankAccount
 CPPF = 	Account.cpp tests.cpp
 
 SRCS = $(CPPF:.cpp=.o)
