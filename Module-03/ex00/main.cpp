@@ -16,7 +16,7 @@ int main(void)
 
 	ClapTrap clapthree = ClapTrap("Warrior_3");
 
-	clapthree = clapthree;
+	clapthree = claptwo;
 	clapthree.attack("l3do_3");
 	clapthree.takeDamage(4);
 	clapthree.beRepaired(20);
