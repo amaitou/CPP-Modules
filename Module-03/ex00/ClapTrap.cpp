@@ -1,8 +1,14 @@
 #include "ClapTrap.hpp"
 
-ClapTrap::ClapTrap(): _name("Warrior_0"), _health(10), _energy(10), _attack(0) {}
+ClapTrap::ClapTrap(): _name("Warrior_0"), _health(10), _energy(10), _attack(0)
+{
+	std::cout << "ClapTrap " << this->_name << " has been created" << std::endl;
+}
 
-ClapTrap::ClapTrap(std::string name): _name(name), _health(10), _energy(10), _attack(0) {}
+ClapTrap::ClapTrap(std::string name): _name(name), _health(10), _energy(10), _attack(0)
+{
+	std::cout << "ClapTrap " << this->_name << " has been created" << std::endl;
+}
 
 ClapTrap::~ClapTrap()
 {
@@ -24,6 +30,7 @@ ClapTrap::ClapTrap(const ClapTrap &copy)
 	this->_attack = copy._attack;
 	this->_energy = copy._energy;
 	this->_health = copy._health;
+	std::cout << "ClapTrap " << this->_name << " copy has been created" << std::endl;
 }
 
 void ClapTrap::attack(const std::string& target)
