@@ -44,7 +44,7 @@ void ScavTrap::guardGate()
 {
 	if (this->_health < 1)
 	{
-		std::cout << "ScavTrap " << this->_name << " cannot gaurd the gate since he is dead" << std::endl;
+		std::cout << "ScavTrap " << this->_name << " cannot guard the gate since he is dead" << std::endl;
 		return ;
 	}
 	std::cout << "ScavTrap " << this->_name << " is now guarding the gate" << std::endl;
