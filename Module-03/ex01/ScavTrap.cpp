@@ -2,7 +2,7 @@
 
 ScavTrap::ScavTrap()
 {
-	this->_name = "Default";
+	this->_name = "ScavTrap_Default";
 	this->_health = 100;
 	this->_energy = 50;
 	this->_attack = 20;
@@ -18,12 +18,12 @@ ScavTrap::ScavTrap(std::string _name)
 	std::cout << "ScavTrap " << this->_name << " has been created" << std::endl;
 }
 
-ScavTrap::ScavTrap(const ScavTrap &_object)
+ScavTrap::ScavTrap(const ScavTrap &_copy)
 {
-	this->_name = _object._name;
-	this->_energy = _object._energy;
-	this->_health = _object._health;
-	this->_attack = _object._attack;
+	this->_name = _copy._name;
+	this->_energy = _copy._energy;
+	this->_health = _copy._health;
+	this->_attack = _copy._attack;
 }
 
 ScavTrap::~ScavTrap()
