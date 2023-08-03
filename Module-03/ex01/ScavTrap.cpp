@@ -49,3 +49,16 @@ void ScavTrap::guardGate()
 	}
 	std::cout << "ScavTrap " << this->_name << " is now guarding the gate" << std::endl;
 }
+
+void	ScavTrap::attack(const std::string& target)
+{
+	if (this->_health < 1)
+		std::cout << "ScavTrap " << this->_name << " cannot attack because he is dead" << std::endl;
+	else if (this->_attack < 1)
+	{
+		std::cout << "ScavTrap " << this->_name << " cannot attack because he run out of power" << std::endl;
+		return ;
+	}
+	std::cout << "ScavTrap " << this->_name << " attacks " << target << ", causing " << this->_attack << " points of damage" << std::endl;
+	this->_energy--;
+}
