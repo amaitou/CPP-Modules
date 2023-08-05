@@ -3,7 +3,7 @@ GPP = c++
 CFLAGS = -Wall -Wextra -Werror
 VFLAG = -std=c++98
 NAME = Megaphone
-CPPF = 	Megaphone.cpp
+CPPF = 	megaphone.cpp
 
 SRCS = $(CPPF:.cpp=.o)
 
