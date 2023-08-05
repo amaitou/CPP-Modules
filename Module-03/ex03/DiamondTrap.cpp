@@ -26,6 +26,15 @@ DiamondTrap::DiamondTrap(const DiamondTrap &___copy)
 	this->_attack = ___copy._attack;
 }
 
+DiamondTrap &DiamondTrap::operator= (const DiamondTrap &___object)
+{
+	this->_name = ___object._name;
+	this->_health = ___object._health;
+	this->_energy = ___object._energy;
+	this->_attack = ___object._attack;
+	return *this;
+}
+
 void	DiamondTrap::attack(const std::string &target)
 {
 	ScavTrap::attack(target);
