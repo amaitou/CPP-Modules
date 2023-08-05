@@ -42,5 +42,5 @@ FragTrap &FragTrap::operator= (const FragTrap &__object)
 
 void FragTrap::highFivesGuys(void)
 {
-	std::cout << "FragTrap " << this->_name << "did a high five" << std::endl;
+	std::cout << "FragTrap " << this->_name << " did a high five" << std::endl;
 }
