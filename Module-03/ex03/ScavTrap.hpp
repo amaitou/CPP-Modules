@@ -3,6 +3,10 @@
 
 #include "ClapTrap.hpp"
 
+#define SCAVTRAP_HEALTH 100
+#define SCAVTRAP_ENERGY 50
+#define SCAVTRAP_ATTACK 20
+
 class ScavTrap: virtual public ClapTrap
 {
 	public:

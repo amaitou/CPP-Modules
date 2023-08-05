@@ -3,6 +3,10 @@
 
 #include "ClapTrap.hpp"
 
+#define FRAGTRAP_HEALTH 100
+#define FRAGTRAP_ENERGY 100
+#define FRAGTRAP_ATTACK 30
+
 class FragTrap: virtual public ClapTrap
 {
 	public:

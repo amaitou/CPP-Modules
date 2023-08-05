@@ -3,18 +3,18 @@
 ScavTrap::ScavTrap()
 {
 	this->_name = "ScavTrap_Default";
-	this->_health = 100;
-	this->_energy = 50;
-	this->_attack = 20;
+	this->_health = SCAVTRAP_HEALTH;
+	this->_energy = SCAVTRAP_ENERGY;
+	this->_attack = SCAVTRAP_ATTACK;
 	std::cout << "ScavTrap " << this->_name << " has been created" << std::endl;
 }
 
 ScavTrap::ScavTrap(std::string _name)
 {
 	this->_name = _name;
-	this->_health = 100;
-	this->_energy = 50;
-	this->_attack = 20;
+	this->_health = SCAVTRAP_HEALTH;
+	this->_energy = SCAVTRAP_ENERGY;
+	this->_attack = SCAVTRAP_ATTACK;
 	std::cout << "ScavTrap " << this->_name << " has been created" << std::endl;
 }
 

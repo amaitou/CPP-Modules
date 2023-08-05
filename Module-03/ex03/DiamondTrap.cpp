@@ -4,18 +4,18 @@ DiamondTrap::DiamondTrap()
 {
 	this->_name = "DiamondTrap_Default";
 	ClapTrap::_name = this->_name + "_clap_name";
-	this->_health = FragTrap::_health;
-	this->_energy = ScavTrap::_energy;
-	this->_attack = FragTrap::_attack;
+	this->_health = FRAGTRAP_HEALTH;
+	this->_energy = SCAVTRAP_ENERGY;
+	this->_attack = FRAGTRAP_ATTACK;
 }
 
 DiamondTrap::DiamondTrap(std::string ___name)
 {
 	this->_name = ___name;
 	ClapTrap::_name = this->_name + "_clap_name";
-	this->_health = FragTrap::_health;
-	this->_energy = ScavTrap::_energy;
-	this->_attack = FragTrap::_attack;
+	this->_health = FRAGTRAP_HEALTH;
+	this->_energy = SCAVTRAP_ENERGY;
+	this->_attack = FRAGTRAP_ATTACK;
 }
 
 DiamondTrap::DiamondTrap(const DiamondTrap &___copy)

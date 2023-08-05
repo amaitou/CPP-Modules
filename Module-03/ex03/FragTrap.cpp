@@ -3,18 +3,18 @@
 FragTrap::FragTrap()
 {
 	this->_name = "FragTrap_Default";
-	this->_health = 100;
-	this->_energy = 100;
-	this->_attack = 30;
+	this->_health = FRAGTRAP_HEALTH;
+	this->_energy = FRAGTRAP_ENERGY;
+	this->_attack = FRAGTRAP_ATTACK;
 	std::cout << "FragTrap " << this->_name << " has been created" << std::endl;
 }
 
 FragTrap::FragTrap(std::string __name)
 {
 	this->_name = __name;
-	this->_health = 100;
-	this->_energy = 100;
-	this->_attack = 30;
+	this->_health = FRAGTRAP_HEALTH;
+	this->_energy = FRAGTRAP_ENERGY;
+	this->_attack = FRAGTRAP_ATTACK;
 	std::cout << "FragTrap " << this->_name << " has been created" << std::endl;
 }
 
