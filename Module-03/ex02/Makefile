@@ -3,7 +3,7 @@ GPP = c++
 CFLAGS = -Wall -Wextra -Werror
 VFLAG = -std=c++98
 NAME = FragTrap
-CPPF = main.cpp ClapTrap.cpp FragTrap.cpp
+CPPF = main.cpp ClapTrap.cpp FragTrap.cpp ScavTrap.cpp
 
 SRCS = $(CPPF:.cpp=.o)
 
