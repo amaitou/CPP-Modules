@@ -18,5 +18,6 @@ int main()
 	delete cat;
 	delete dog;
 	delete animal;
+
 	return 0;
 }
