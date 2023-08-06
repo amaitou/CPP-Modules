@@ -3,7 +3,7 @@ GPP = c++
 CFLAGS = -Wall -Wextra -Werror
 VFLAG = -std=c++98
 NAME = Animal
-CPPF = main.cpp Animal.cpp Dog.cpp Cat.cpp
+CPPF = main.cpp Animal.cpp Dog.cpp Cat.cpp WrongAnimal.cpp WrongCat.cpp
 
 SRCS = $(CPPF:.cpp=.o)
 
