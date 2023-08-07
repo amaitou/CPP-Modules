@@ -4,7 +4,7 @@
 
 int main()
 {
-	std::cout << "[.] Allocating Animals and Calling Constructors\n" << std::endl;
+	std::cout << "[.] Creating Animal array and Calling Constructors\n" << std::endl;
 	Animal *animal[20];
 	int	i = 0;
 
