@@ -2,6 +2,19 @@
 #include <string>
 #include <iostream>
 
+std::string replace_extension(std::string filename)
+{
+	std::string newfile = "";
+	size_t position = filename.find_last_of(".");
+	if (position != std::string::npos)
+	{
+		newfile = filename.substr(0, position) + ".replace";
+		return newfile;
+	}
+	else
+		return filename + ".replace";
+}
+
 int main(void)
 {
 	std::string filename;
@@ -21,7 +34,7 @@ int main(void)
 		std::cout << "[!] Could not open the given file" << std::endl;
 		return (0);
 	}
-	replaced = filename + ".replaced";
+	replaced = replace_extension(filename);
 	filetwo.open(replaced, std::ios::out);
 	if (!filetwo.is_open())
 	{
