@@ -1,6 +1,6 @@
 
-#include "Account.hpp"
 #include <iostream>
+#include "Account.hpp"
 
 int	Account::_nbAccounts;
 int	Account::_totalAmount;

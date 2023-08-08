@@ -35,4 +35,5 @@ int main(int ac, char **ag)
 	}
 	else
 		std::cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *" << std::endl;
+	return 0;
 }

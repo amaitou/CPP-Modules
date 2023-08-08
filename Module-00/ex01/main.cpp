@@ -18,7 +18,6 @@ int main(void)
 			book.search();
 		else
 			std::cout << "\n[!] Invalid Command, Try Again !" << "\n";
-		fflush(stdin);
 		std::cin.clear();
 		clearerr(stdin);
 	}

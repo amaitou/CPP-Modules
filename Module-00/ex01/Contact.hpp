@@ -1,19 +1,21 @@
 
+#ifndef CONTACT_HPP
+#define CONTACT_HPP
+
 #include <iostream>
 #include <string>
 #include <iomanip>
 
-#ifndef CONTACT_HPP
-#define CONTACT_HPP
 
 class Contact
 {
-	public:
+	private:
 		std::string fname;
 		std::string lname;
 		std::string nname;
 		std::string number;
 		std::string secret;
+	public:
 
 		int	set_fname(void);
 		int	set_lname(void);
