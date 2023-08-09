@@ -8,12 +8,6 @@ Fixed::Fixed()
 	std::cout << "The default constructor has been called" << std::endl;
 }
 
-Fixed::Fixed(int value)
-{
-	this->value = value;
-	std::cout << "The parametarized constructor has been called" << std::endl;
-}
-
 Fixed::Fixed(const Fixed &copy)
 {
 	this->value = copy.value;
