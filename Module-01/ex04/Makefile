@@ -12,6 +12,9 @@ all: $(NAME)
 $(NAME): $(SRCS)
 	$(GPP) $(VGLAG) $(CFLAGS) $^ -o $@
 
+%.o : %.cpp
+	$(GPP) $(CFLAGS) $(VFLAG) -c $^
+
 fclean:
 	rm -rf $(NAME) $(SRCS) *.replaced
 
