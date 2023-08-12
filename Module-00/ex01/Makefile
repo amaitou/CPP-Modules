@@ -10,7 +10,7 @@ SRCS = $(CPPF:.cpp=.o)
 all: $(NAME)
 
 $(NAME): $(SRCS)
-	$(GPP) $(VGLAG) $(CFLAGS) $^ -o $@
+	$(GPP) $(VFLAG) $(CFLAGS) $^ -o $@
 
 %.o : %.cpp
 	$(GPP) $(CFLAGS) $(VFLAG) -c $^
