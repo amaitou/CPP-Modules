@@ -1,11 +1,11 @@
 *.pdf
 *.out
 *.o
+logfile.log
+.DS_Store
 Megaphone
 Phonebook
 Account
-.DS_Store
-logfile.log
 Zombie
 Harl
 War
@@ -18,3 +18,4 @@ BankAccount
 Animal
 Fixed
 Fixed2
+Fixed3
