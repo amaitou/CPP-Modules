@@ -25,7 +25,7 @@ static bool is_in(Point const a, Point const b, Point const c, Point const point
 	Fixed pbc = area(point, b, c);
 	Fixed pac = area(a, point, c);
 	Fixed pab = area(a, b, point);
-	return (abc == pbc + pac + pab);
+	return ((abc == pbc + pac + pab) && (pbc > 0 && pac > 0 && pab > 0));
 }
 
 bool bsp( Point const a, Point const b, Point const c, Point const point)
