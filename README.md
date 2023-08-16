@@ -1,6 +1,6 @@
 # CPP Modules
 
-In this series of the projects 42 attempts to give us a deep understanding of C++ specially concepts related to `Object-Oriented Programming` and it made us go all through the `OOP` concepts to understand them by doing a lot of projects (tricky ones) in order to get the whole picture of `OOP`.
+In this series of projects 42 attempts to give us a deep understanding of C++ especially concepts related to `Object-Oriented Programming` and it made us go all through the `OOP` concepts to understand them by doing a lot of projects (tricky ones) in order to get the whole picture of `OOP`.
 
 for more information about the school check [1337/42 Network](https://github.com/amaitou/1337)
 
@@ -8,7 +8,7 @@ for more information about the school check [1337/42 Network](https://github.com
 
 # Modules Info
 
-| Module Name | Topics Two                                                    | Marks |
+| Module Name | Topic                                                   | Marks |
 | ----------- | ------------------------------------------------------------- | -------- |
 | Module 00   | Classes, Member Functions, Basic C++ Stuff                    |100%✅ |
 | Module 01   | Memory allocation, pointers to members, references, switch statement | 100%✅ |
