@@ -8,13 +8,13 @@ for more information about the school check [1337/42 Network](https://github.com
 
 # Modules Info
 
-| Module Name | Topic                                                   | Marks |
+| Module Name | Topic                                                   | Status |
 | ----------- | ------------------------------------------------------------- | -------- |
-| Module 00   | Classes, Member Functions, Basic C++ Stuff                    |100%✅ |
-| Module 01   | Memory allocation, pointers to members, references, switch statement | 100%✅ |
-| Module 02   | Ad-hoc polymorphism, operator overloading, Orthodox Canonical class form and Fixed-Point | 100%✅ |
-| Module 03   | Inheritance       | 100%✅ |
-| Module 04   | Subtype polymorphism, abstract classes, interfaces            | 80% ✅  |
+| _Module 00_   | **Classes, Member Functions, Basic C++ Stuff**                    |100% ✅ |
+| _Module 01_   | **Memory allocation, pointers to members, references, switch statement** | 100% ✅ |
+| _Module 02_   | **Ad-hoc polymorphism, operator overloading, Orthodox Canonical class form and Fixed-Point** | 100% ✅ |
+| _Module 03_   | **Inheritance**       | 100% ✅ |
+| _Module 04_   | **Subtype polymorphism, abstract classes, interfaces**            | 80% ✅  |
 
 ---
 
