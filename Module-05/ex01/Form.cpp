@@ -1,0 +1,70 @@
+#include "Form.hpp"
+
+Form::Form()
+	: name("Default"), sign_grade(0), sign_execute(0)
+{
+	this->is_signed = false;
+}
+
+Form::Form(const std::string name, const int sign_grade, const int sign_execute, bool is_signed)
+	: name(name), sign_grade(sign_grade), sign_execute(sign_execute)
+{
+	if (sign_grade < 1)
+		throw Form::GradeTooHighException();
+	else if (sign_grade > 150)
+		throw Form::GradeTooLowException();
+	else
+		this->is_signed = is_signed;
+}
+
+Form::~Form() {}
+
+Form::Form(const Form &copy)
+	: name(copy.name), sign_grade(copy.sign_grade), sign_execute(copy.sign_execute)
+{
+	this->is_signed = copy.is_signed;
+}
+
+Form &Form::operator = (const Form &object)
+{
+	this->is_signed = object.is_signed;
+	return (*this);
+}
+
+const char	*Form::GradeTooHighException::what() const throw()
+{
+	return ("Grade too high\n");
+}
+
+const char	*Form::GradeTooLowException::what() const throw()
+{
+	return ("Grade too low\n");
+}
+
+const std::string	Form::getName(void)
+{
+	return (this->name);
+}
+
+int	Form::getSignGrade(void)
+{
+	return (this->sign_grade);
+}
+
+int Form::getSignExecute(void)
+{
+	return (this->sign_execute);
+}
+
+bool Form::getIsSigned(void)
+{
+	return (this->is_signed);
+}
+
+void	Form::beSigned(Bureaucrat &object)
+{
+	if (object.getGrade() > this->getSignGrade())
+		throw Form::GradeTooLowException();
+	else
+		this->is_signed = true;
+}

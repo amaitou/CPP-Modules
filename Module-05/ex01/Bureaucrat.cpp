@@ -1,5 +1,6 @@
 #include "Bureaucrat.hpp"
 
+
 Bureaucrat::Bureaucrat(): name("Default")
 {
 	this->grade = 0;
@@ -9,9 +10,9 @@ Bureaucrat::~Bureaucrat() {}
 Bureaucrat::Bureaucrat(const std::string name, int grade): name(name)
 {
 	if (grade < 0)
-		throw Bureaucrat::GradeTooHighException();
+		throw GradeTooHighException();
 	else if (grade > 150)
-		throw Bureaucrat::GradeTooLowException();
+		throw GradeTooLowException();
 	else
 		this->grade = grade;
 }
@@ -46,18 +47,26 @@ int	Bureaucrat::getGrade(void)
 void	Bureaucrat::incrementGrade(void)
 {
 	if (this->getGrade() <= 1)
-		throw Bureaucrat::GradeTooHighException();
+		throw GradeTooHighException();
 	this->grade--;
 }
 
 void	Bureaucrat::decrementGrade(void)
 {
 	if (this->getGrade() >= 150)
-		throw Bureaucrat::GradeTooLowException();
+		throw GradeTooLowException();
 	this->grade++;
 }
 
 std::ostream& operator<<(std::ostream &os, Bureaucrat &object)
 {
 	return (os << object.getName() << " ,bureaucrat grade " << object.getGrade());
+}
+
+void Bureaucrat::signForm(Form &object)
+{
+	if (object.getIsSigned())
+		std::cout << this->getName() << " signed " << object.getName();
+	else
+		std::cout << this->getName() << " couldn’t sign " << object.getName() << " because grade is too low" << std::endl;
 }
