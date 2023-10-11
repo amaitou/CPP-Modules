@@ -20,8 +20,7 @@ int main(void)
 	try
 	{
 		Bureaucrat b;
-		std::cout << "Name -> " << b.getName() << std::endl;
-		std::cout << "Grade -> " << b.getGrade() << std::endl;
+		std::cout << b << std::endl;
 		b.decrementGrade();
 		b.decrementGrade();
 		b.decrementGrade();
@@ -35,5 +34,8 @@ int main(void)
 	{
 		std::cout << "Error: " << e.what() << std::endl;
 	}
+	Bureaucrat x("Copy", 115);
+	Bureaucrat y = x;
+	std::cout << y << std::endl;
 	return (0);
 }
