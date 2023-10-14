@@ -34,12 +34,12 @@ Bureaucrat &Bureaucrat::operator = (const Bureaucrat &object)
 	return *this;
 }
 
-std::string	Bureaucrat::getName(void)
+std::string	Bureaucrat::getName(void) const
 {
 	return (this->name);
 }
 
-int	Bureaucrat::getGrade(void)
+int	Bureaucrat::getGrade(void) const
 {
 	return (this->grade);
 }
@@ -63,7 +63,7 @@ std::ostream& operator<<(std::ostream &os, Bureaucrat &object)
 	return (os << object.getName() << " ,bureaucrat grade " << object.getGrade());
 }
 
-void Bureaucrat::signForm(Form &object)
+void Bureaucrat::signForm(Form &object) const
 {
 	if (object.getIsSigned())
 		std::cout << this->getName() << " signed " << object.getName();

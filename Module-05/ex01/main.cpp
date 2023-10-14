@@ -6,25 +6,13 @@ int main(void)
 {
 	try
 	{
-		Bureaucrat b("Cop", 1000);
+		Bureaucrat b("Cop", 50);
 		Form f("Paper", 80, 80, false);
 		std::cout << "Bureaucrat Info -> " << b << std::endl;
 		f.beSigned(b);
 		b.signForm(f);
 	} 
-	catch (const Form::GradeTooHighException &e)
-	{
-		std::cout << "Error: " << e.what() << std::endl;
-	}
-	catch (const Form::GradeTooLowException &e)
-	{
-		std::cout << "Error: " << e.what() << std::endl;
-	}
-	catch (const Bureaucrat::GradeTooHighException &e)
-	{
-		std::cout << "Error: " << e.what() << std::endl;
-	}
-	catch (const Bureaucrat::GradeTooLowException &e)
+	catch(const std::exception &e)
 	{
 		std::cout << "Error: " << e.what() << std::endl;
 	}

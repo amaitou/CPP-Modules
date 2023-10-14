@@ -41,22 +41,22 @@ const char	*Form::GradeTooLowException::what() const throw()
 	return ("Grade too low\n");
 }
 
-const std::string	Form::getName(void)
+const std::string	Form::getName(void) const
 {
 	return (this->name);
 }
 
-int	Form::getSignGrade(void)
+int	Form::getSignGrade(void) const
 {
 	return (this->sign_grade);
 }
 
-int Form::getSignExecute(void)
+int Form::getSignExecute(void) const
 {
 	return (this->sign_execute);
 }
 
-bool Form::getIsSigned(void)
+bool Form::getIsSigned(void) const
 {
 	return (this->is_signed);
 }
