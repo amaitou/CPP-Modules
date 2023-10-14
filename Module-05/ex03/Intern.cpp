@@ -16,7 +16,7 @@ Intern & Intern::operator = (const Intern &object)
 
 Form *Intern::makeForm(std::string name, const std::string target)
 {
-	std::string names[] = {"shrubbery", "robotomy request", "presidentialpardon"};
+	std::string names[] = {"shrubbery creation", "robotomy request", "presidential pardon"};
 	Form *objects[] = {new ShrubberyCreationForm(target), new RobotomyRequestForm(target), new PresidentialPardonForm(target)};
 	int i(0);
 	while (i < 3)
