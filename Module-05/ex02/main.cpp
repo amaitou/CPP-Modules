@@ -28,6 +28,8 @@ int main(void)
 		bureaucrat.executeForm(shrubberycreationform);
 		bureaucrat.executeForm(robotomyrequestform);
 		bureaucrat.executeForm(presidentialpardonform);
+
+		std::cout << shrubberycreationform << std::endl;
 	}
 	catch(const std::exception &e)
 	{

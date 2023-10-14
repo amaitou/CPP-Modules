@@ -42,4 +42,6 @@ class Form
 		virtual void        execute( const Bureaucrat& executor) const = 0;
 };
 
+std::ostream& operator<<(std::ostream &os, Form &object);
+
 #endif

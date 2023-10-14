@@ -11,6 +11,7 @@ int main(void)
 		std::cout << "Bureaucrat Info -> " << b << std::endl;
 		f.beSigned(b);
 		b.signForm(f);
+		std::cout << f << std::endl;
 	} 
 	catch(const std::exception &e)
 	{

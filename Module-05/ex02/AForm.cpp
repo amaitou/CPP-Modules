@@ -74,3 +74,10 @@ void	Form::beSigned(Bureaucrat &object)
 	else
 		this->is_signed = true;
 }
+
+std::ostream& operator<<(std::ostream &os, Form &object)
+{
+	return (os << "Name: " << object.getName() << "\nGrade: " << object.getSignGrade()
+		<< "\nExecution: " << object.getSignExecute() << "\nIsSigned: "
+		<< (object.getIsSigned() ? "true": "false")) << std::endl;
+}

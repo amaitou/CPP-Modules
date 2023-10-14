@@ -36,4 +36,6 @@ class Form
 		void	beSigned(Bureaucrat &object);
 };
 
+std::ostream& operator<<(std::ostream &os, Form &object);
+
 #endif
