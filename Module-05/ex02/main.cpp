@@ -8,7 +8,7 @@ int main(void)
 {
 	try
 	{
-		AForm *aform;
+		Form *aform;
 		Bureaucrat bureaucrat("Bureaucrat", 2);
 		ShrubberyCreationForm shrubberycreationform;
 		RobotomyRequestForm robotomyrequestform;

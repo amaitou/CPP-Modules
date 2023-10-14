@@ -1,11 +1,11 @@
 #include "ShrubberyCreationForm.hpp"
 
-ShrubberyCreationForm::ShrubberyCreationForm(): AForm("ShrubberyCreationForm", 145, 137, false)
+ShrubberyCreationForm::ShrubberyCreationForm(): Form("ShrubberyCreationForm", 145, 137, false)
 {
 	this->target = "DefaultTarget";
 }
 ShrubberyCreationForm::ShrubberyCreationForm(const std::string target):
-	AForm("ShrubberyCreationForm", 145, 137, false)
+	Form("ShrubberyCreationForm", 145, 137, false)
 {
 	this->target = target;
 }
@@ -32,7 +32,7 @@ void	ShrubberyCreationForm::execute(const Bureaucrat &executor) const
 	if (this->getIsSigned())
 	{
 		if (executor.getGrade() > this->getSignExecute())
-			throw AForm::GradeTooLowException();
+			throw Form::GradeTooLowException();
 		std::ofstream outputFile(this->getTarget() + "_shrubbery", std::ios::out | std::ios::trunc);
 		if (outputFile.is_open())
 		{
@@ -51,5 +51,5 @@ void	ShrubberyCreationForm::execute(const Bureaucrat &executor) const
 			std::cerr << "Failed to create the file " << this->getTarget() + "_shrubbery" << std::endl;
 	}
 	else
-		throw AForm::GradeTooLowException();
+		throw Form::GradeTooLowException();
 }

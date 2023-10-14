@@ -63,7 +63,7 @@ std::ostream& operator<<(std::ostream &os, Bureaucrat &object)
 	return (os << object.getName() << " ,bureaucrat grade " << object.getGrade());
 }
 
-void Bureaucrat::signForm(AForm &object)
+void Bureaucrat::signForm(Form &object)
 {
 	if (object.getIsSigned())
 		std::cout << this->getName() << " signed " << object.getName();
@@ -71,7 +71,7 @@ void Bureaucrat::signForm(AForm &object)
 		std::cout << this->getName() << " couldn’t sign " << object.getName() << " because grade is too low" << std::endl;
 }
 
-void	Bureaucrat::executeForm(AForm const &form) const
+void	Bureaucrat::executeForm(Form const &form) const
 {
 	try
 	{
@@ -80,6 +80,6 @@ void	Bureaucrat::executeForm(AForm const &form) const
 	}
 	catch(std::exception &e)
 	{
-		throw AForm::GradeTooLowToExecute();
+		throw Form::GradeTooLowToExecute();
 	}
 }

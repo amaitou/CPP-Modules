@@ -1,11 +1,11 @@
 #include "RobotomyRequestForm.hpp"
 
-RobotomyRequestForm::RobotomyRequestForm(): AForm("RobotomyRequest", 72, 45, false)
+RobotomyRequestForm::RobotomyRequestForm(): Form("RobotomyRequest", 72, 45, false)
 {
 	this->target = "DefaultTarget";
 }
 RobotomyRequestForm::RobotomyRequestForm(const std::string target):
-	AForm("RobotomyRequest", 72, 45, false)
+	Form("RobotomyRequest", 72, 45, false)
 {
 	this->target = target;
 }
@@ -32,7 +32,7 @@ void	RobotomyRequestForm::execute( const Bureaucrat& executor) const
 	if (this->getIsSigned())
 	{
 		if (executor.getGrade() > this->getSignExecute())
-			throw AForm::GradeTooLowException();
+			throw Form::GradeTooLowException();
 		std::srand(std::time(nullptr));
     	int randomValue = std::rand() % 2;
 		if (randomValue)
@@ -41,5 +41,5 @@ void	RobotomyRequestForm::execute( const Bureaucrat& executor) const
 			std::cout << this->getTarget() << " robotomy failed." << std::endl;
 	}
 	else
-		throw AForm::GradeTooLowException();
+		throw Form::GradeTooLowException();
 }

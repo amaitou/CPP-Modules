@@ -12,7 +12,7 @@ class Intern
 		~Intern();
 		Intern(const Intern &copy);
 		Intern & operator = (const Intern &object);
-		AForm *makeForm(std::string name, std::string target);
+		Form *makeForm(std::string name, std::string target);
 } ;
 
 #endif

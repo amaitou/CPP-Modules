@@ -1,12 +1,12 @@
 
-#ifndef AFORM_HPP
-#define AFORM_HPP
+#ifndef AForm_HPP
+#define AForm_HPP
 
 #include "Bureaucrat.hpp"
 
 class Bureaucrat;
 
-class AForm
+class Form
 {
 	private:
 		const std::string 	name;
@@ -29,11 +29,11 @@ class AForm
 			public:
 				virtual const char *what() const throw();
 		};
-		AForm();
-		AForm(const std::string name, const int sign_grade, const int sign_execute, bool is_signed);
-		~AForm();
-		AForm(const AForm &copy);
-		AForm & operator = (const AForm &object);
+		Form();
+		Form(const std::string name, const int sign_grade, const int sign_execute, bool is_signed);
+		~Form();
+		Form(const Form &copy);
+		Form & operator = (const Form &object);
 		const std::string	getName(void) const;
 		int	getSignGrade(void) const;
 		int	getSignExecute(void) const;

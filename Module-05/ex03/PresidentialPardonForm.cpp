@@ -1,11 +1,11 @@
 #include "PresidentialPardonForm.hpp"
 
-PresidentialPardonForm::PresidentialPardonForm(): AForm("PresidentialPardonForm", 25, 5, false)
+PresidentialPardonForm::PresidentialPardonForm(): Form("PresidentialPardonForm", 25, 5, false)
 {
 	this->target = "DefaultTarget";
 }
 PresidentialPardonForm::PresidentialPardonForm(const std::string target):
-	AForm("PresidentialPardonForm", 25, 5, false)
+	Form("PresidentialPardonForm", 25, 5, false)
 {
 	this->target = target;
 }
@@ -32,7 +32,7 @@ void	PresidentialPardonForm::execute(const Bureaucrat &executor) const
 	if (this->getIsSigned())
 	{
 		if (executor.getGrade() > this->getSignExecute())
-			throw AForm::GradeTooLowToExecute();
+			throw Form::GradeTooLowToExecute();
 		std::cout << this->getTarget() << " has been pardoned by Zaphod Beeblebrox." << std::endl;
 	}
 }

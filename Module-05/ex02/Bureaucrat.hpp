@@ -7,7 +7,7 @@
 #include <exception>
 #include "AForm.hpp"
 
-class AForm;
+class Form;
 
 class Bureaucrat
 {
@@ -34,8 +34,8 @@ class Bureaucrat
 		int	getGrade(void) const;
 		void	incrementGrade(void);
 		void	decrementGrade(void);
-		void	signForm(AForm &object);
-		void	executeForm(AForm const & form) const;
+		void	signForm(Form &object);
+		void	executeForm(Form const & form) const;
 };
 
 std::ostream& operator<<(std::ostream &os, Bureaucrat &object);
