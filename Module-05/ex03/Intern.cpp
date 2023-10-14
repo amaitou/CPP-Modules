@@ -28,6 +28,6 @@ Form *Intern::makeForm(std::string name, const std::string target)
 		}
 		++i;
 	}
-	std::cout << "Intern failed to created object" << name << std::endl;
+	std::cout << "Intern failed to created object " << name << std::endl;
 	return (NULL);
 }

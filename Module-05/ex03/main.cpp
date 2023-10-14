@@ -7,10 +7,10 @@ int main(void)
 	try
 	{
 		Intern intern;
-		intern.makeForm("shrubbery", "target_one");
+		intern.makeForm("shrubbery creation", "target_one");
 		intern.makeForm("robotomy request", "target_two");
-		intern.makeForm("presidentialpardon", "target_three");
-		intern.makeForm("nonexistedobject", "target_four");
+		intern.makeForm("presidential pardon", "target_three");
+		intern.makeForm("non existed object", "target_four");
 	}
 	catch(const std::exception &e)
 	{
