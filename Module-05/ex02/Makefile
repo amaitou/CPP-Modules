@@ -18,6 +18,6 @@ fclean:
 	rm -rf $(NAME) $(SRCS) *_shrubbery
 
 run:
-	@make && ./ShrubberyCreationForm
+	@make && ./AForm
 
 re: fclean all
