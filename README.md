@@ -58,6 +58,9 @@ here's a curated list of useful links for learning various Object-Oriented Progr
 - [C++ Fixed-Point Arithmetic](https://embeddedartistry.com/blog/2018/07/12/simple-fixed-point-conversion-in-c/)
 	-  Learn about fixed-point arithmetic in C++, which is useful for applications where floating-point arithmetic is less suitable due to resource constraints.
 	---
+- [Type Casting in C++](https://www.prepbytes.com/blog/cpp-programming/type-casting-in-cpp/#:~:text=Type%20casting%20in%20C%2B%2B%20refers,requires%20a%20different%20data%20type.)
+	- Dive into the world of type casting which is a useful thing to know while using c++ since there are many types of type casting
+	---
 
 >> These resources cover a wide range of OOP concepts in C++, including classes, polymorphism, abstract classes, virtual functions, inheritance, the diamond problem, and even fixed-point arithmetic. Remember to practice hands-on coding and experiment with these concepts to solidify your understanding.
 
