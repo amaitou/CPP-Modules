@@ -8,12 +8,6 @@
 
 class ScalarConverter
 {
-	private:
-		std::string _str;
-		int _integer;
-		float   _float;
-		double  _double;
-		char    _character;
 	public:
 		ScalarConverter();
 		~ScalarConverter();
