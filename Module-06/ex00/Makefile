@@ -1,7 +1,7 @@
 GPP = c++
 CFLAGS = -Wall -Wextra -Werror
 VFLAG = -std=c++98
-NAME = ScalarConverter
+NAME = convert
 CPPF = main.cpp ScalarConverter.cpp
 
 SRCS = $(CPPF:.cpp=.o)
@@ -18,6 +18,6 @@ fclean:
 	rm -rf $(NAME) $(SRCS)
 
 run:
-	@make && ./ScalarConverter
+	@make && ./convert 42
 
 re: fclean all

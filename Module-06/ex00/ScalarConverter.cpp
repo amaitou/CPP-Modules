@@ -25,90 +25,116 @@ ScalarConverter &ScalarConverter::operator = (const ScalarConverter &object)
     return (*this);
 }
 
-void    ScalarConverter::setString(std::string _str)
+void    ScalarConverter::toCharacter(std::string _string)
 {
-    this->_str = _str;
-}
+    char    *ptr;
+    double  value;
+    std::string str;
 
-void    ScalarConverter::setInteger(int _integer)
-{
-    this->_integer = _integer;
-}
-
-void    ScalarConverter::setFloat(float _float)
-{
-    this->_float = _float;
-}
-
-void    ScalarConverter::setDouble(double _double)
-{
-    this->_double = _double;
-}
-
-void    ScalarConverter::setCharacter(char _character)
-{
-    this->_character = _character;
-}
-
-std::string ScalarConverter::getString(void) const
-{
-    return (this->_str);
-}
-
-int     ScalarConverter::getInteger(void) const
-{
-    return (this->_integer);
-}
-
-float   ScalarConverter::getFloat(void) const
-{
-    return (this->_float);
-}
-
-char    ScalarConverter::getCharacter(void) const
-{
-    return (this->_character);
-}
-
-bool ScalarConverter::checkPsuedoLiterals(void) const
-{
-    if (this->getString() == "nan" || this->getString() == "nanf"
-        || this->getString() == "-inf" || this->getString() == "-inff"
-        || this->getString() == "+inff" || this->getString() == "+inf")
-        return (true);
-    return (false);
-}
-
-bool ScalarConverter::checkCharacter(void) const
-{
-    if (this->getString().length() > 1
-        || (this->getString()[0] || isalpha(this->getString()[0])
-        || isprint(this->getString()[0])))
-        return (false);
-    return (true);
-}
-
-bool ScalarConverter::checkInteger(void) const
-{
-    size_t  i;
-
-    i = 0;
-    if (this->getString()[0] && (this->getString()[0] == '-' || this->getString()[0] == '+'))
-        ++i;
-    while (i < this->getString().length())
+    value = std::strtod(_string.c_str(), &ptr);
+    str = ptr;
+    if (_string[0] == '.' || _string[_string.length() - 1] == '.')
+        std::cout << "char : " << "impossible" << std::endl;
+    else if (str.length() <= 1 && (str == "f" || str == "") && value >= 0 && value <= 127)
     {
-        if (!isdigit(this->getString()[i]))
-            return (false);
-        ++i;
+        if (isprint(value) && !str.length())
+            std::cout << "char : " << "'" << static_cast<char>(value) << "'" << std::endl;
+        else if (value == 0 && str.length())
+            std::cout << "char : " << "'" << str << "'" << std::endl;
+        else if (value && str.length() && str != "f")
+            std::cout << "char : impossible" << std::endl;
+        else if (value && str.length() && str == "f" && isprint(value))
+            std::cout << "char : " << "'" << static_cast<char>(value) << "'" << std::endl;
+        else
+            std::cout << "char : not printable" << std::endl;
     }
-    return (true);
+    else if (!value && str.length() == 1)
+        std::cout << "char : " << "'" << str << "'" << std::endl;
+    else
+        std::cout << "char : impossible" << std::endl;
 }
 
-bool ScalarConverter::checkFloat(void) const
+void ScalarConverter::toInteger(std::string _string)
 {
-    size_t  i;
-    size_t  found_commas;
-    i = 0;
-    if (this->getString()[0] && (this->getString()[0] == '-' || this->getString()[0] == '+'))
-        ++i;
+    char    *ptr;
+    double  value;
+    std::string str;
+
+    value = std::strtod(_string.c_str(), &ptr);
+    str = ptr;
+    if (_string[0] == '.' || _string[_string.length() - 1] == '.')
+        std::cout << "char : " << "impossible" << std::endl;
+    else if (str.length() <= 1)
+    {
+        if ((str == "" || str == "f") && value)
+            std::cout << "int : " << static_cast<int> (value) << std::endl;
+        else if (value == 0 && str.length() == 1)
+            std::cout << "int : " << static_cast<int> (*ptr) << std::endl;
+        else if (value >= INT_MAX || value <= INT_MIN)
+            std::cout << "int : impossible" << std::endl;
+        else
+            std::cout << "int : " << static_cast<int> (value) << std::endl;
+    }
+    else
+        std::cout << "int : impossible" << std::endl;
+}
+
+void    ScalarConverter::toFloat(std::string _string)
+{
+    char    *ptr;
+    double  value;
+    std::string str;
+
+    value = std::strtof(_string.c_str(), &ptr);
+    str = ptr;
+    if (_string[0] == '.' || _string[_string.length() - 1] == '.')
+        std::cout << "float : " << "impossible" << std::endl;
+    else if (str.length() <= 1)
+    {
+        if ((str == "" || str == "f") && value)
+            std::cout << "float : " << static_cast<float>(value) << "f" << std::endl;
+        else if (*ptr && str.length() == 1 && value == 0)
+            std::cout << "float : " << static_cast<float>(*ptr) << "f" << std::endl;
+        else if (*ptr && str.length() && value)
+            std::cout << "float : impossible" << std::endl;
+        else
+            std::cout << "float : 0.0f" << std::endl;
+    }
+    else
+        std::cout << "float : impossible" << std::endl;
+}
+
+void    ScalarConverter::toDouble(std::string _string)
+{
+    char    *ptr;
+    double  value;
+    std::string str;
+
+    value = std::strtod(_string.c_str(), &ptr);
+    str = ptr;
+    if (_string[0] == '.' || _string[_string.length() - 1] == '.')
+        std::cout << "float : " << "impossible" << std::endl;
+    else if (str.length() <= 1)
+    {
+        if ((str == "" || str == "f") && value)
+            std::cout << "float : " << static_cast<double> (value) << std::endl;
+        else if (*ptr && str.length() == 1 && !value)
+            std::cout << "float : " << static_cast<double> (*ptr) << std::endl;
+        else if (*ptr && str.length() && value)
+            std::cout << "float : impossible" << std::endl;
+        else
+            std::cout << "float : 0.0" << std::endl;
+    }
+    else
+        std::cout << "float : impossible" << std::endl;
+}
+
+void    ScalarConverter::printValues(std::string _string)
+{
+    std::cout << std::fixed;
+    std::cout	<<	std::setprecision(_string.find(".") != SIZE_T_MAX ? _string.length() - _string.find('.') - 1 : 1);
+    ScalarConverter::toCharacter(_string);
+    ScalarConverter::toInteger(_string);
+    ScalarConverter::toFloat(_string);
+    ScalarConverter::toDouble(_string);
 }

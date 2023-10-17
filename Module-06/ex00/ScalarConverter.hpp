@@ -4,37 +4,28 @@
 #include <iostream>
 #include <string>
 #include <cstdlib>
+#include <iomanip>
 
 class ScalarConverter
 {
-    private:
-        std::string _str;
-        int _integer;
-        float   _float;
-        double  _double;
-        char    _character;
-    public:
-        ScalarConverter();
-        ~ScalarConverter();
-        ScalarConverter(const ScalarConverter &copy);
-        ScalarConverter & operator = (const ScalarConverter &object);
+	private:
+		std::string _str;
+		int _integer;
+		float   _float;
+		double  _double;
+		char    _character;
+	public:
+		ScalarConverter();
+		~ScalarConverter();
+		ScalarConverter(const ScalarConverter &copy);
+		ScalarConverter & operator = (const ScalarConverter &object);
 
-        std::string getString(void) const;
-        int         getInteger(void) const;
-        float       getFloat(void) const;
-        char        getCharacter(void) const;
-        double      getDouble(void) const;
-
-        void        setString(std::string string);
-        void        setInteger(int _integer);
-        void        setFloat(float _float);
-        void        setDouble(double _double);
-        void        setCharacter(char c);
-
-        bool        checkPsuedoLiterals(void) const;
-        bool        checkCharacter(void) const;
-        bool        checkInteger(void) const;
-        bool        checkFloat(void) const;
+		static void		toInteger(std::string _string);
+		static void		toCharacter(std::string _string);
+		static void		toFloat(std::string _string);
+		static void		toDouble(std::string _string);
+		
+		static void		printValues(std::string _string);
 };
 
 #endif

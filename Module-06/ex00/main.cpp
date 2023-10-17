@@ -8,8 +8,6 @@ int main(int ac, char **ag)
         std::cerr<< "Usuage: ./ScalarConverter <string>" << std::endl;
         return (EXIT_FAILURE);
     }
-    ScalarConverter converter;
-    converter.setString(ag[1]);
-    std::cout << converter.checkInteger() << std::endl;
+    ScalarConverter::printValues(ag[1]);
     return (EXIT_SUCCESS);
 }
