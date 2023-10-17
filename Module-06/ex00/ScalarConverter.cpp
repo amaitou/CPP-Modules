@@ -1,13 +1,7 @@
 
 #include "ScalarConverter.hpp"
 
-ScalarConverter::ScalarConverter()
-{
-    this->_character = '\0';
-    this->_integer = 0;
-    this->_float = 0.0f;
-    this->_double = 0.0;
-}
+ScalarConverter::ScalarConverter(){}
 
 ScalarConverter::~ScalarConverter() {}
 
@@ -18,10 +12,7 @@ ScalarConverter::ScalarConverter(const ScalarConverter &copy)
 
 ScalarConverter &ScalarConverter::operator = (const ScalarConverter &object)
 {
-    this->_character = object._character;
-    this->_integer = object._integer;
-    this->_float = object._float;
-    this->_double = object._double;
+    (void)object;
     return (*this);
 }
 
