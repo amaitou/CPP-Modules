@@ -19,6 +19,7 @@ for more information about the school check [1337/42 Network](https://github.com
 | _Module 02_   | **Ad-hoc polymorphism, operator overloading, Orthodox Canonical class form, and Fixed-Point** | 100% ✅ |
 | _Module 03_   | **Inheritance**       | 100% ✅ |
 | _Module 04_   | **Subtype polymorphism, abstract classes, interfaces**            | 80% ✅  |
+| _Module 05_	| **C++ casts**														| 100% ✅
 
 ---
 
