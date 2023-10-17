@@ -19,7 +19,8 @@ for more information about the school check [1337/42 Network](https://github.com
 | _Module 02_   | **Ad-hoc polymorphism, operator overloading, Orthodox Canonical class form, and Fixed-Point** | 100% ✅ |
 | _Module 03_   | **Inheritance**       | 100% ✅ |
 | _Module 04_   | **Subtype polymorphism, abstract classes, interfaces**            | 80% ✅  |
-| _Module 05_	| **C++ casts**														| 100% ✅
+| _Module 05_	| **Repetition and Exceptions**														| 100% ✅
+| _Module 06_	| **C++ casts**														| 100% ✅
 
 ---
 
@@ -31,6 +32,7 @@ for more information about the school check [1337/42 Network](https://github.com
 - [Module 03](https://github.com/amaitou/CPP-Modules/tree/master/Module-03)
 - [Module 04](https://github.com/amaitou/CPP-Modules/tree/master/Module-04)
 - [Module 05](https://github.com/amaitou/CPP-Modules/tree/master/Module-05)
+- [Module 06](https://github.com/amaitou/CPP-Modules/tree/master/Module-06)
 
 ---
 
