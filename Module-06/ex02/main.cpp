@@ -7,5 +7,8 @@ int main(void)
 	Base *two = one->generate();
 	one->identify(two);
 	one->identify(*two);
+
+	delete one;
+	delete two;
 	return (EXIT_SUCCESS);
 }
