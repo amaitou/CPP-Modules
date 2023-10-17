@@ -104,20 +104,20 @@ void    ScalarConverter::toDouble(std::string _string)
     value = std::strtod(_string.c_str(), &ptr);
     str = ptr;
     if (_string[0] == '.' || _string[_string.length() - 1] == '.')
-        std::cout << "float : " << "impossible" << std::endl;
+        std::cout << "double : " << "impossible" << std::endl;
     else if (str.length() <= 1)
     {
         if ((str == "" || str == "f") && value)
-            std::cout << "float : " << static_cast<double> (value) << std::endl;
+            std::cout << "double : " << static_cast<double> (value) << std::endl;
         else if (*ptr && str.length() == 1 && !value)
-            std::cout << "float : " << static_cast<double> (*ptr) << std::endl;
+            std::cout << "double : " << static_cast<double> (*ptr) << std::endl;
         else if (*ptr && str.length() && value)
-            std::cout << "float : impossible" << std::endl;
+            std::cout << "double : impossible" << std::endl;
         else
-            std::cout << "float : 0.0" << std::endl;
+            std::cout << "double : 0.0" << std::endl;
     }
     else
-        std::cout << "float : impossible" << std::endl;
+        std::cout << "double : impossible" << std::endl;
 }
 
 void    ScalarConverter::printValues(std::string _string)
