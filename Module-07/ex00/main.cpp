@@ -24,7 +24,7 @@ int main(void)
 		std::cout << min(f1, f2) << std::endl;
 	}
 
-	// Default Exercice Tests
+	// Default Exercise Tests
 	std::cout << "\nDefault Tests :" << std::endl;
 	{
 		int a = 2;
