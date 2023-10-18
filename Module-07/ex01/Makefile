@@ -1,7 +1,7 @@
 GPP = c++
 CFLAGS = -Wall -Wextra -Werror
 VFLAG = -std=c++98
-NAME = Template
+NAME = Iter
 CPPF = main.cpp
 
 SRCS = $(CPPF:.cpp=.o)
