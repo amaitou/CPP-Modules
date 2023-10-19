@@ -4,23 +4,21 @@
 #include <iostream>
 #include <cstdlib>
 
-template <typename T>
-void	iter(T *arr, size_t len, void(*func)(T, size_t, size_t))
+template <typename T, typename U>
+void	iter(T *arr, size_t len, void(*func)(U))
 {
 	size_t i(0);
 	while (i < len)
 	{
-		func(arr[i], i, len);
+		func(arr[i]);
 		++i;
 	}
 }
 
-template <typename T>
-void	print_elements(T element, size_t index, size_t len)
+template <typename U>
+void	print_elements(U element)
 {
-	std::cout << element;
-	if (!(index + 1 == len))
-		std::cout << ", ";
+	std::cout << element << ", ";
 }
 
 #endif
