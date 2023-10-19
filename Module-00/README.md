@@ -1,3 +1,6 @@
+
+---
+
 # Table Of Content
 
 - [C++ Class](https://github.com/amaitou/CPP-Modules/tree/master/Module-00#c-class)
@@ -6,6 +9,8 @@
 - [Using namespace std](https://github.com/amaitou/CPP-Modules/tree/master/Module-00#using-namespace-std)
 - [Name Conflicts](https://github.com/amaitou/CPP-Modules/tree/master/Module-00#name-conflicts)
 - [Static Members](https://github.com/amaitou/CPP-Modules/tree/master/Module-00#static-members)
+
+---
 # C++ Class
 
 In C++, a class is a blueprint or a user-defined data type that defines a structure to represent objects and their associated behavior. It encapsulates both data (attributes) and functions (methods) that operate on the data. You can think of a class as a template for creating objects
