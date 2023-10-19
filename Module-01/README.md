@@ -8,7 +8,7 @@
     - [Automatic Memory Allocation (Stack Allocation)](https://github.com/amaitou/CPP-Modules/tree/master/Module-01#automatic-memory-allocation-stack-allocation)
 - [New Keyword](https://github.com/amaitou/CPP-Modules/tree/master/Module-01#new-keyword)
 - [Pointer To Member Function](https://github.com/amaitou/CPP-Modules/tree/master/Module-01#pointer-to-member-function)
-    - [Function Pointers vs. Pointers to Member Functions](https://github.com/amaitou/CPP-Modules/tree/master/Module-01#--function-pointers-vs-pointers-to-member-functions)
+    - [Function Pointers vs. Pointers to Member Functions](https://github.com/amaitou/CPP-Modules/tree/master/Module-01#-function-pointers-vs-pointers-to-member-functions)
 - [Reference & In C++](https://github.com/amaitou/CPP-Modules/tree/master/Module-01#reference--in-c)
     - [Reference & Pointers](https://github.com/amaitou/CPP-Modules/tree/master/Module-01#reference--pointers)
 ---
@@ -177,7 +177,7 @@ MyClass* pObj = new MyClass;
 int result = (pObj->*functionPtr)(42);
 ```
 
-## - Function Pointers vs. Pointers to Member Functions:
+## Function Pointers vs. Pointers to Member Functions:
 
 - `Function pointers` ```(void(*)(...))``` can point to standalone functions or static member functions and do not require an instance of a class.
 - `Pointers to member functions` can only point to non-static member functions and require an instance of the class for invocation.
