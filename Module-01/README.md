@@ -1,3 +1,18 @@
+
+---
+# Table Of Content
+
+- [Class Allocation](https://github.com/amaitou/CPP-Modules/tree/master/Module-01#class-allocation)
+- [Dynamic & Automatic Allocations In C++](https://github.com/amaitou/CPP-Modules/tree/master/Module-01#dynamic--automatic-allocations-in-c)
+    - [Dynamic Memory Allocation (Heap Allocation)](https://github.com/amaitou/CPP-Modules/tree/master/Module-01#dynamic-memory-allocation-heap-allocation)
+    - [Automatic Memory Allocation (Stack Allocation)](https://github.com/amaitou/CPP-Modules/tree/master/Module-01#automatic-memory-allocation-stack-allocation)
+- [New Keyword](https://github.com/amaitou/CPP-Modules/tree/master/Module-01#new-keyword)
+- [Pointer To Member Function](https://github.com/amaitou/CPP-Modules/tree/master/Module-01#pointer-to-member-function)
+    - [Function Pointers vs. Pointers to Member Functions](https://github.com/amaitou/CPP-Modules/tree/master/Module-01#--function-pointers-vs-pointers-to-member-functions)
+- [Reference & In C++](https://github.com/amaitou/CPP-Modules/tree/master/Module-01#reference--in-c)
+    - [Reference & Pointers](https://github.com/amaitou/CPP-Modules/tree/master/Module-01#reference--pointers)
+---
+
 # Class Allocation
 
 In C++, when you create a class, memory is allocated for its objects. The memory allocation for a class can be broken down into several components:
