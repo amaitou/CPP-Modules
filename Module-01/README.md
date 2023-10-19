@@ -8,7 +8,7 @@
     - [Automatic Memory Allocation (Stack Allocation)](https://github.com/amaitou/CPP-Modules/tree/master/Module-01#automatic-memory-allocation-stack-allocation)
 - [New Keyword](https://github.com/amaitou/CPP-Modules/tree/master/Module-01#new-keyword)
 - [Pointer To Member Function](https://github.com/amaitou/CPP-Modules/tree/master/Module-01#pointer-to-member-function)
-    - [Function Pointers vs. Pointers to Member Functions](https://github.com/amaitou/CPP-Modules/tree/master/Module-01#-function-pointers-vs-pointers-to-member-functions)
+    - [Function Pointers vs. Pointers to Member Functions](https://github.com/amaitou/CPP-Modules/tree/master/Module-01#function-pointers-vs-pointers-to-member-functions)
 - [Reference & In C++](https://github.com/amaitou/CPP-Modules/tree/master/Module-01#reference--in-c)
     - [Reference & Pointers](https://github.com/amaitou/CPP-Modules/tree/master/Module-01#reference--pointers)
 ---
