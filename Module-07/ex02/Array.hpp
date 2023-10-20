@@ -27,8 +27,8 @@ class Array
 		}
 		Array(const Array &copy)
 		{
-			this->n = copy.size;
-			this->array = new T[copy.size];
+			this->n = copy.n;
+			this->array = new T[copy.n];
 			size_t i(0);
 			while (i < this->n)
 			{
