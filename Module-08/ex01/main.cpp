@@ -5,14 +5,30 @@ int main(void)
 	{
 		try
 		{
-			Span span(10000);
+			Span span(10);
 			unsigned int i(0);
-			while (i < span.getSize())
+
+			// fill the vector
+			while (i < 5)
 				span.addNumber(i++);
+			// insert a vector
+			std::vector<int> v2;
+			v2.push_back(1150);
+			v2.push_back(1400);
+			v2.push_back(1400);
+			v2.push_back(1400);
+			v2.push_back(1400);
+			span.addNumber(v2);
+
+			// print the vector
+			size_t j(0);
+			while (j < span.getSize())
+				std::cout << span[j++] << std::endl;
+
+			// call the member functions to calculate the distances
 			std::cout << "Shortest Span -> " << span.shortestSpan() << std::endl;
 			std::cout << "Longest Span -> " << span.longestSpan() << std::endl;
 			std::cout << "Span Size -> " << span.getSize() << std::endl;
-			span.addNumber(1000);
 		}
 		catch(const std::exception& e)
 		{

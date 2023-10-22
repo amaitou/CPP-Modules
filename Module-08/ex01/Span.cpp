@@ -27,15 +27,22 @@ Span &Span::operator = (const Span &object)
 
 unsigned int Span::getSize(void) const
 {
-	return (this->n);
+	return (this->v.size());
 }
 
 void	Span::addNumber(int n)
 {
 	
-	if (this->getSize() == this->v.size())
+	if (this->n < this->v.size())
 		throw Span::SizeOutOfBounds();
 	this->v.push_back(n);
+}
+
+void	Span::addNumber(std::vector<int> &targetVector)
+{
+	if (this->v.size() + targetVector.size() > this->n)
+		throw Span::SizeOutOfBounds();
+	this->v.insert(v.end(), targetVector.begin(), targetVector.end());
 }
 
 int Span::shortestSpan(void)
@@ -62,4 +69,11 @@ int Span::longestSpan(void)
 	std::vector<int> temp_vector = this->v;
 	std::sort(temp_vector.begin(), temp_vector.end());
 	return (temp_vector.back() - temp_vector.front());
+}
+
+int &Span::operator[] (size_t index)
+{
+	if (index >= this->v.size())
+		throw Span::SizeOutOfBounds();
+	return (this->v[index]);
 }

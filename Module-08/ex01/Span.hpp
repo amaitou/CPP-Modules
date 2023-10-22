@@ -18,6 +18,8 @@ class Span
 		Span & operator = (const Span &copy);
 		unsigned int	getSize(void) const;
 		void	addNumber(int n);
+		void	addNumber(std::vector<int> &targetVector);
+		int & operator [] (size_t index);
 		class SizeOutOfBounds: public std::exception
 		{
 			public:
