@@ -7,12 +7,12 @@
 #include <deque>
 
 template <class T>
-class MutantStack: public std::stack<T>
+class MutantStack: public std::stack<T, std::deque<T> >
 {
 	public:
 		MutantStack() {}
 		~MutantStack() {}
-		MutantStack(const MutantStack &copy): std::stack<T>(copy) {}
+		MutantStack(const MutantStack &copy): std::stack<T, std::deque<T> >(copy) {}
 		MutantStack & operator = (const MutantStack &object)
 		{
 			if (this != &object)
