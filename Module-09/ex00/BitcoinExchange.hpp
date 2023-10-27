@@ -56,7 +56,7 @@ class BitcoinExchange
 		void	fill_map(void);
 		int		check_value(std::string &str);
 		int		check_key(std::string &str);
-		int		check_error(std::string key, std::string value);c
+		int		check_error(std::string key, std::string value);
 		void	calculate_bitcoin(void);
 };
 
