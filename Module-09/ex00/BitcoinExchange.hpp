@@ -13,6 +13,7 @@ class BitcoinExchange
 	private:
 		std::string file;
 		std::ifstream infile;
+		std::map<std::string, float> m;
 	
 	public:
 		BitcoinExchange(std::string str);
@@ -52,6 +53,11 @@ class BitcoinExchange
 		};
 
 		void	check_first_line(void) ;
+		void	fill_map(void);
+		int		check_value(std::string &str);
+		int		check_key(std::string &str);
+		int		check_error(std::string key, std::string value);c
+		void	calculate_bitcoin(void);
 };
 
 #endif
