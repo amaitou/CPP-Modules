@@ -124,7 +124,7 @@ void calculate_bitcoin(std::string path, std::map<std::string, float> &m)
         throw std::string ("failed to open input database");
     std::getline(input, token);
     if (token != "date | value")
-        throw std::string ("invalid input file format");
+        throw std::string ("the input file must always starts with \"date | value\"");
     while (std::getline(input, token))
     {
         position = token.find(" ");
