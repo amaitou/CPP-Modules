@@ -6,6 +6,7 @@
 #include <stack>
 #include <cstdlib>
 #include <sstream>
+#include <climits>
 
 int postfix_evaluation(std::string infix);
 
