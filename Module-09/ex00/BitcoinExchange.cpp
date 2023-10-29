@@ -136,16 +136,19 @@ void calculate_bitcoin(std::string path, std::map<std::string, float> &m)
             value = token.substr(position + 3);
             if (check_error(date, value))
                 continue;
-            t = m.begin();
-            while (t != m.end())
+            t = m.find(date);
+            if (t != m.end())
             {
-                if (t->first == date)
-                {
-                    bitcoin = strtof(value.c_str(), &ptr);
-                    std::cout << date << " => " << value << " => "
-                        << t->second * bitcoin << std::endl;
-                }
-                ++t;
+                bitcoin = strtof(value.c_str(), &ptr);
+                std::cout << date << " => " << value << " => "
+                    << t->second * bitcoin << std::endl;
+            }
+            else
+            {
+                t = m.lower_bound(date);
+                bitcoin = strtof(value.c_str(), &ptr);
+                std::cout << t->first << " => " << value << " => "
+                    << t->second * bitcoin << std::endl;
             }
         }
     }
