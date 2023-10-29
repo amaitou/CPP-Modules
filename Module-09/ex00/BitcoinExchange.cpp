@@ -146,6 +146,7 @@ void calculate_bitcoin(std::string path, std::map<std::string, float> &m)
             else
             {
                 t = m.lower_bound(date);
+                t--;
                 bitcoin = strtof(value.c_str(), &ptr);
                 std::cout << t->first << " => " << value << " => "
                     << t->second * bitcoin << std::endl;
