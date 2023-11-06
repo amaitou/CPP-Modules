@@ -1,4 +1,20 @@
 
+
+---
+# Table Of Content
+
+- [Inheritance](https://github.com/amaitou/CPP-Modules/tree/master/Module-03#inheritance)
+	- [Abstract](https://github.com/amaitou/CPP-Modules/tree/master/Module-03#abstract)
+	- [What is Inheritance ?](https://github.com/amaitou/CPP-Modules/tree/master/Module-03#what-is-inheritance-)
+	- [How to use it ?](https://github.com/amaitou/CPP-Modules/tree/master/Module-03#how-to-use-it-)
+- [Types Of Inheritance](https://github.com/amaitou/CPP-Modules/tree/master/Module-03#type-of-inheritance-)
+- [Common Problems in Inheritance](https://github.com/amaitou/CPP-Modules/tree/master/Module-03#common-problems-in-inheritance)
+- [In Terms Of C++](https://github.com/amaitou/CPP-Modules/tree/master/Module-03#in-terms-of-c)
+	- [Public Inheritance](https://github.com/amaitou/CPP-Modules/tree/master/Module-03#public-inheritance)
+	- [Private Inheritance](https://github.com/amaitou/CPP-Modules/tree/master/Module-03#private-inheritance)
+	- [Protected Inheritance](https://github.com/amaitou/CPP-Modules/tree/master/Module-03#protected-inheritance)
+- [Diamond Problem](https://github.com/amaitou/CPP-Modules/tree/master/Module-03#diamond-problem)
+---
 # Inheritance
 
 - ### Abstract
