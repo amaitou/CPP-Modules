@@ -33,6 +33,9 @@ for more information about the school check [1337/42 Network](https://github.com
 - [Module 04](https://github.com/amaitou/CPP-Modules/tree/master/Module-04)
 - [Module 05](https://github.com/amaitou/CPP-Modules/tree/master/Module-05)
 - [Module 06](https://github.com/amaitou/CPP-Modules/tree/master/Module-06)
+- [Module 07](https://github.com/amaitou/CPP-Modules/tree/master/Module-07)
+- [Module 08](https://github.com/amaitou/CPP-Modules/tree/master/Module-08)
+- [Module 09](https://github.com/amaitou/CPP-Modules/tree/master/Module-09)
 
 ---
 
