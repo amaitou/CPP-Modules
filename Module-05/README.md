@@ -1,4 +1,16 @@
 
+---
+# Table Of Content
+
+- [Exception Handling](https://github.com/amaitou/CPP-Modules/tree/master/Module-05#exception-handling)
+	- [Throwing An Exception](https://github.com/amaitou/CPP-Modules/tree/master/Module-05#throwing-an-exception)
+	- [Catching Exception](https://github.com/amaitou/CPP-Modules/tree/master/Module-05#catching-exception)
+- [Standard Exception Classes](https://github.com/amaitou/CPP-Modules/tree/master/Module-05#standard-exception-classes)
+	- [std::exception](https://github.com/amaitou/CPP-Modules/tree/master/Module-05#stdexception)
+	- [std::runtime_error](https://github.com/amaitou/CPP-Modules/tree/master/Module-05#stdruntime_error)
+	- [std::logic_error](https://github.com/amaitou/CPP-Modules/tree/master/Module-05#stdlogic_error)
+- [Creating Your Own Exception](https://github.com/amaitou/CPP-Modules/tree/master/Module-05#creating-your-own-exception)
+---
 # Exception Handling
 
 Exception handling in C++ is a mechanism that allows you to deal with unexpected situations or errors that can occur during program execution. It provides a way to gracefully handle errors and recover from them, rather than letting the program crash.
