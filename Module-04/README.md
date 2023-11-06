@@ -1,4 +1,11 @@
 
+---
+# Table Of Content
+
+- [Abstract Classes](https://github.com/amaitou/CPP-Modules/tree/master/Module-04#abstract-classes)
+- [Interfaces](https://github.com/amaitou/CPP-Modules/tree/master/Module-04#interfaces)
+- [Virtual Keyword](https://github.com/amaitou/CPP-Modules/tree/master/Module-04#virtual-keyword)
+---
 # Abstract Classes
 
 In C++, an abstract class is a class that cannot be instantiated on its own, and it is typically used as a base class for other classes. Abstract classes are used to define a common interface and provide a blueprint for derived classes, but they cannot be used to create objects directly. Abstract classes are often used in conjunction with pure virtual functions to define a set of methods that derived classes must implement.
@@ -57,7 +64,7 @@ class Interface
 ```
 ---
 
-# virtual Keyword
+# Virtual Keyword
 
 In C++, the virtual keyword is used to declare a member function of a class as "virtual." Virtual functions play a crucial role in enabling polymorphism, a fundamental concept in object-oriented programming. When a member function is declared as virtual in a base class, it allows derived classes to override that function, providing their own implementations. The actual function called at runtime depends on the object's dynamic (runtime) type.
 
@@ -108,4 +115,4 @@ ptr->someFunction();
 
 In this example, the virtual function someFunction is called based on the actual type of the object being pointed to, allowing for dynamic dispatch.
 
-> You can the virtual keyword also in multiple inheritance as we have seen before in module 03 to solve the Diamond Problem, as well as you can use it with destructors. 
+> You can use the virtual keyword also in multiple inheritance as we have seen before in cpp module 03 to solve the Diamond Problem, as well as you can use it with destructors. 
