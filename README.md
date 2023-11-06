@@ -68,6 +68,14 @@ here's a curated list of useful links for learning various Object-Oriented Progr
 	- Dive into the world of type casting which is a useful thing to know while using c++ since there are many types of type casting
 	---
 
+- [Templates in C++](https://www.geeksforgeeks.org/templates-cpp/)
+	- Get Deep Into the concept of `Template Functions` in c++, and their usage
+
+	---
+
+- [Containers in C++ STL (Standard Template Library)](https://www.geeksforgeeks.org/containers-cpp-stl/)
+	- Understand In depth the containers and their types as well as learn how to use their methods
+
 >> These resources cover a wide range of OOP concepts in C++, including classes, polymorphism, abstract classes, virtual functions, inheritance, the diamond problem, and even fixed-point arithmetic. Remember to practice hands-on coding and experiment with these concepts to solidify your understanding.
 
 ---
