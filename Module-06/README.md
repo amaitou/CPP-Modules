@@ -3,13 +3,12 @@
 ---
 # Table Of Content
 
-- [Casting in C++](https://github.com/amaitou/CPP-Modules/tree/master/Module-05#casting-in-c)
-	- [Static Cast](https://github.com/amaitou/CPP-Modules/tree/master/Module-05#static-cast)
-	- [Dynamic Cast](https://github.com/amaitou/CPP-Modules/tree/master/Module-05#dynamic-cast)
-	- [Const Cast](https://github.com/amaitou/CPP-Modules/tree/master/Module-05#const-cast)
-	- [Reinterpret Cast](https://github.com/amaitou/CPP-Modules/tree/master/Module-05#reinterpret-cast)
-	- [C-Style Cast](https://github.com/amaitou/CPP-Modules/tree/master/Module-05#c-style-cast)
----
+- [Casting in C++](https://github.com/amaitou/CPP-Modules/tree/master/Module-06#casting-in-c)
+	- [Static Cast](https://github.com/amaitou/CPP-Modules/tree/master/Module-06#static-cast)
+	- [Dynamic Cast](https://github.com/amaitou/CPP-Modules/tree/master/Module-06#dynamic-cast)
+	- [Const Cast](https://github.com/amaitou/CPP-Modules/tree/master/Module-06#const6cast)
+	- [Reinterpret Cast](https://github.com/amaitou/CPP-Modules/tree/master/Module-6#reinterpret-cast)
+	- [C-Style Cast](https://github.com/amaitou/CPP-Modules/tree/master/Module-06#c-stylecast)
 
 # Casting in C++
 
