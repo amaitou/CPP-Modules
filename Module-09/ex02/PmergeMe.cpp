@@ -33,6 +33,8 @@ int PmergeMe::check_number(std::string &number)
     size_t  i;
     
     i = 0;
+    if (number[i] == '+')
+        ++i;
     while (i < number.size())
     {
         if (!isdigit(number[i]))
