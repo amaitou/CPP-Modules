@@ -12,7 +12,7 @@ PmergeMe::PmergeMe()
         this->jacobstal[i] = temp[i];
         ++i;
     }
-
+    this->number_of_elements = 0;
 }
 
 PmergeMe::PmergeMe(const PmergeMe &copy)
@@ -56,38 +56,60 @@ int PmergeMe::parse_numbers(char **ag)
         this->vector_sequence.push_back(atoi(ag[i]));
         this->deque_sequence.push_back(atoi(ag[i]));
         ++i;
+        this->number_of_elements++;
     }
     return (0);
 }
 
-void PmergeMe::print_sequence(void)
+void    PmergeMe::print_vector(char c)
 {
     size_t i;
 
     i = 0;
-    std::cout << "Vector:" << std::endl;
+    if (c == 'b')
+        std::cout << "Before:\t";
+    else
+        std::cout << "After:\t";
     while (i < this->vector_sequence.size())
     {
-        std::cout << this->vector_sequence[i] << ", ";
+        if (i + 1 == this->vector_sequence.size())
+            std::cout << this->vector_sequence[i] << std::endl;
+        else
+            std::cout << this->vector_sequence[i] << " ";
         ++i;
     }
-    std::cout << std::endl;
-    // i = 0;
-    // std::cout << "Deque:" << std::endl;
-    // while (i < this->vector_sequence.size())
-    // {
-    //     std::cout << this->deque_sequence[i] << ", ";
-    //     ++i;
-    // }
+}
+
+void    PmergeMe::print_deque(char c)
+{
+    size_t i;
+
+    i = 0;
+    if (c == 'b')
+        std::cout << "Before:\t";
+    else
+        std::cout << "After:\t";
+    while (i < this->deque_sequence.size())
+    {
+        if (i + 1 == this->deque_sequence.size())
+            std::cout << this->deque_sequence[i] << std::endl;
+        else
+            std::cout << this->deque_sequence[i] << " ";
+        ++i;
+    }
 }
 
 void    PmergeMe::sort_vector(void)
 {
-    size_t i;
-    size_t j;
+    size_t  i;
+    size_t  j;
+    clock_t start;
+    clock_t end;
     std::vector<int>::iterator insertion_point;
 
     i = 0;
+    this->print_vector('b');
+    start = clock();
     if (this->vector_sequence.size() % 2 != 0)
         this->is_pended = this->vector_sequence[this->vector_sequence.size() - 1];
     while (i < this->vector_sequence.size() && i + 1 < this->vector_sequence.size())
@@ -119,5 +141,65 @@ void    PmergeMe::sort_vector(void)
         this->vector_main.insert(insertion_point, this->vector_pend[i]);
         ++i;
     }
+    end = clock();
     this->vector_sequence = this->vector_main;
+    this->print_vector('a');
+    std::cout   << "Time to process a range of "
+                << this->number_of_elements
+                <<  " elements with std::vector\t: "
+                << end - start
+                << " us"
+                << std::endl;
+}
+
+void    PmergeMe::sort_deque(void)
+{
+    size_t i;
+    size_t j;
+    clock_t start;
+    clock_t end;
+    std::deque<int>::iterator insertion_point;
+
+    i = 0;
+    this->is_pended = -1;
+    start = clock();
+    if (this->deque_sequence.size() % 2 != 0)
+        this->is_pended = this->deque_sequence[this->deque_sequence.size() - 1];
+    while (i < this->deque_sequence.size() && i + 1 < this->deque_sequence.size())
+    {
+        this->deque_main.push_back((std::max(this->deque_sequence[i], this->deque_sequence[i + 1])));
+        this->deque_pend.push_back((std::min(this->deque_sequence[i], this->deque_sequence[i + 1])));
+        i += 2;
+    }
+    if (this->is_pended != -1)
+        this->deque_pend.push_back(this->is_pended);
+    std::sort(this->deque_main.begin(), this->deque_main.end());
+    this->deque_main.insert(this->deque_main.begin(), this->deque_pend[0]);
+    this->deque_pend.erase(this->deque_pend.begin());
+    i = 2;
+    while (i < this->deque_pend.size())
+    {
+        j = this->jacobstal[i];
+        if (j > this->deque_pend.size())
+            break;
+        insertion_point = std::lower_bound(this->deque_main.begin(), this->deque_main.end(), this->deque_pend[j - 1]);
+        this->deque_main.insert(insertion_point, this->deque_pend[j - 1]);
+        this->deque_pend.erase(this->deque_pend.begin() + (j - 1));
+        ++i;
+    }
+    i = 0;
+    while (i < this->deque_pend.size())
+    {
+        insertion_point = std::lower_bound(this->deque_main.begin(), this->deque_main.end(), this->deque_pend[i]);
+        this->deque_main.insert(insertion_point, this->deque_pend[i]);
+        ++i;
+    }
+    end = clock();
+    this->deque_sequence = this->deque_main;
+    std::cout   << "Time to process a range of "
+                << this->number_of_elements
+                <<  " elements with std::deque\t: "
+                << end - start
+                << " us"
+                << std::endl;
 }

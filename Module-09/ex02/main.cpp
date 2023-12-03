@@ -2,14 +2,18 @@
 
 int main(int ac, char **ag)
 {
-    if (ac <= 0)
+    if (ac <= 1)
     {
         std::cout << "Error: sequence of numbers needed" << std::endl;
         return (1);
     }
     PmergeMe p;
-    p.parse_numbers(ag);
+    if (p.parse_numbers(ag))
+	{
+		std::cout << "Error" << std::endl;
+		return (1);
+	}
     p.sort_vector();
-    p.print_sequence();
+    p.sort_deque();
     return (0);
 }
