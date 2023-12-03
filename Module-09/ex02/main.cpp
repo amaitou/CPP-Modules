@@ -9,6 +9,7 @@ int main(int ac, char **ag)
     }
     PmergeMe p;
     p.parse_numbers(ag);
+    p.sort_vector();
     p.print_sequence();
     return (0);
 }
