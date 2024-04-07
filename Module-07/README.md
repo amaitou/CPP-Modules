@@ -2,7 +2,8 @@
 # Table of content
 
 - [Templates](https://github.com/amaitou/CPP-Modules/tree/master/Module-07#templates)
-    - 
+    - [Function template](https://github.com/amaitou/CPP-Modules/tree/master/Module-07#function-templates)
+    - [Class template](https://github.com/amaitou/CPP-Modules/tree/master/Module-07#class-templates)
 
 # Templates
 
