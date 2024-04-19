@@ -56,7 +56,7 @@ here's a curated list of useful links for learning various Object-Oriented Progr
 	- Learn about abstract classes and pure virtual functions, which are fundamental concepts for creating interfaces and achieving abstraction in C++.
 	---
 - [Inheritance in C++](https://www.learncpp.com/cpp-tutorial/111-introduction-to-inheritance/)
-	- This tutorial provides an introduction to inheritance in C++, explaining how to create derived classes, base classes, and how inheritance hierarchy works.
+	- This tutorial provides an introduction to inheritance in C++, explaining how to create derived classes, and base classes, and how inheritance hierarchy works.
 	---
 - [The Diamond Problem and Virtual Inheritance](https://www.geeksforgeeks.org/multiple-inheritance-in-c/)
 	- Understand the diamond problem in multiple inheritance and how virtual inheritance helps solve the ambiguity it creates.
@@ -65,11 +65,11 @@ here's a curated list of useful links for learning various Object-Oriented Progr
 	-  Learn about fixed-point arithmetic in C++, which is useful for applications where floating-point arithmetic is less suitable due to resource constraints.
 	---
 - [Type Casting in C++](https://www.prepbytes.com/blog/cpp-programming/type-casting-in-cpp/#:~:text=Type%20casting%20in%20C%2B%2B%20refers,requires%20a%20different%20data%20type.)
-	- Dive into the world of type casting which is a useful thing to know while using c++ since there are many types of type casting
+	- Dive into the world of typecasting which is a useful thing to know while using C++ since there are many types of typecasting
 	---
 
 - [Templates in C++](https://www.geeksforgeeks.org/templates-cpp/)
-	- Get Deep Into the concept of `Template Functions` in c++, and their usage
+	- Get Deep Into the concept of `Template Functions` in C++, and their usage
 
 	---
 
@@ -83,7 +83,5 @@ here's a curated list of useful links for learning various Object-Oriented Progr
 - ### **Contact Me**
 
 * [Twitter][_1]
-* [Instagram][_2]
 
 [_1]: https://twitter.com/amait0u
-[_2]: https://www.instagram.com/amait0u
