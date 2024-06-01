@@ -80,8 +80,9 @@ here's a curated list of useful links for learning various Object-Oriented Progr
 
 ---
 
-- ### **Contact Me**
+### **Contact Me**
 
 * [Twitter][_1]
 
 [_1]: https://twitter.com/amait0u
+
